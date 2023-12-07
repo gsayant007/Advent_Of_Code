@@ -1,3 +1,5 @@
+import numpy as np
+
 with open(r"Advent_Of_Code_2023\day2_input.txt","r") as f:
     games = f.readlines()
 
@@ -58,3 +60,10 @@ required_games = dict(
 p1_ans = sum([int(y.split(" ")[1]) for y in required_games])
 
 print(f"Answer for the first part is {p1_ans}")
+
+
+d1 = {
+    k : np.product([max(np.array(v)[:,0]),max(np.array(v)[:,1]),max(np.array(v)[:,2])][::-1])   for k,v in game_dict_3.items()
+}
+
+print(f"Answer for the second part is: {sum(d1.values())}")
