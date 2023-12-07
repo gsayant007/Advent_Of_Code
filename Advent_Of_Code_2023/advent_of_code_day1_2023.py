@@ -1,4 +1,4 @@
-with open("./day1_input.txt","r") as f:
+with open(r"Advent_Of_Code_2023\day1_input.txt","r") as f:
      words = f.readlines()
 
 num_list_2 = ["one","two","three","four","five","six","seven","eight","nine"]
